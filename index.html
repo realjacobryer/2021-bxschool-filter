@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <!-- set the character set -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- first step to a responsive site -->
+    <title>Bronx SHSAT Filter</title>
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!-- Your styles should be called here -->
+    <link href="style.css" rel="stylesheet" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!-- YOUR CONTENT GOES HERE -->
+    <div class="title">
+      <h1>Top Bronx Middle Schools</h1>
+      <p class="sub">(at getting into specialized high schools)
+      <p>
+    </div>
+    <div class="container" id="byline">
+      By Jacob Schermerhorn | Updated March 8, 2021
+    </div>
+    <div class="container photo">
+      <img src="images/TTCForum1.jpeg" alt="Mayoral Forum hosted by Teens Take Charge.">
+      <figcaption>Mayoral candidates were given a question about the area of a triangle during an online forum.</figcaption>
+    </div>
+    <div class="container">
+      <p>During a <a href="https://www.teenstakecharge.com/mayor">Mayoral Forum on Friday,</a> student activist Toby Paperno surprised mayoral hopefuls with a pop quiz on poetry and math. None of them answered the questions correctly.</p>
+      <p> "To those of you who got some of these questions wrong, you are not as smart as your peers and will be denied entrance to the specialized high schools," Paperno said, "If you had a bad day and didn't get some of the questions right — I
+        don't care and neither does the test."</p>
+      <p>The forum, which was held by student activist group Teens Take Charge, was focused on inequalities of the Specialized High School Assessment Test. Although the nine specialized high schools have recently <a
+          href="https://www.silive.com/news/2020/12/sweeping-application-changes-for-nyc-specialized-high-schools-middle-schools.html">relaxed their application process,</a> activists, including TTC, claim the test is still biased toward students who
+        are white and wealthy.</p>
+      <p>Using Specialized High School acceptance rate data released by the NYC Department of Education from 2015 to 2019, the most successful middle schools in the Bronx tended to be whiter and wealthier.</p>
+      <p>For example, at Riverdale Kingbridge Academy, one in four
+        students are white and the poverty rates are the lowest in the bourough at 52%. The median population of white students in Bronx schools is 1.2%, the median poverty rate is 88%.</p>
+    </div>
+    <div class="container">
+      <h2>Bronx Schools</h2>
+      <p>Use the filter below to learn more about which middle schools in the Bronx are the best at acing the SHSAT.
+      </p>
+      <div class="flex filter">
+        <div>
+          <select id="rank" class="filter">
+            <option value="item">Rank...</option>
+            <option value="toprank">1 - 5</option>
+            <option value="upperrank">6 - 10</option>
+            <option value="lowerrank">11 - 15</option>
+            <option value="bottomrank">16 - 20</option>
+          </select>
+        </div>
+        <div>
+          <select id="poverty" class="filter">
+            <option value="item">Poverty Rate...</option>
+            <option value="leastpoverty">0 - 70%</option>
+            <option value="lowerpoverty">70 - 80%</option>
+            <option value="upperpoverty">80 - 90%</option>
+            <option value="mostpoverty">90 - 100%</option>
+          </select>
+        </div>
+        <div>
+          <select id="race" class="filter">
+            <option value="item">% White students...</option>
+            <option value="mostwhite">35 - 25%</option>
+            <option value="upperwhite">25 - 15%</option>
+            <option value="lowerwhite">15 - 5%</option>
+            <option value="leastwhite">5 - 0%</option>
+          </select>
+        </div>
+        <div>
+          <select id="charter" class="filter">
+            <option value="item">Charter School...</option>
+            <option value="charter">Yes</option>
+            <option value="notcharter">No</option>
+          </select>
+        </div>
+      </div>
+      <div class="flex container">
+        <section class=flex>
+          <div class="item active toprank leastpoverty mostwhite notcharter">
+            <img src="images/schools/rdalekbridgeacademy.png" alt="Riverdale Kingsbridge Academy">
+            <strong>#1 - Riverdale Kingsbridge Academy</strong>
+            <div class="statistics">
+              <ul>Rank = 1</ul>
+              <ul>Povery = 52%</ul>
+              <ul>% White Students = 25.98% </ul>
+              <ul>Non Charter</ul>
+            </div>
+          </div>
+          <div class="item active toprank lowerpoverty upperwhite notcharter">
+            <img src="images/schools/ms101edwardrbyrne.png" class="image" alt="M.S. 101 Edward Byrne">
+            <strong>#2 - M.S. 101 Edward R. Byrne</strong>
+          </div>
+          <div class="item active toprank upperpoverty leastwhite charter">
+            <img src="images/schools/bronxsuccessacademy2.png" alt="Success Academy Charter School 2">
+            <strong onclick="overlay_click()">#3 - Success Academy Charter School 2</strong>
+          </div>
+          <div class="item active toprank lowerpoverty leastwhite notcharter">
+            <img src="images/schools/inquryandsocialjustice.png" alt="The School for Inquiry and Social Justice">
+            <strong>#4 - The School for Inquiry and Social Justice</strong>
+          </div>
+          <div class="item active toprank lowerpoverty leastwhite notcharter">
+            <img src="images/schools/psms194.png" alt="P.S./M.S. 194">
+            <strong>#5 - P.S./M.S. 194</strong>
+          </div>
+          <div class="item active upperrank leastpoverty mostwhite notcharter">
+            <img src="images/schools/ps083donaldhertz.png" alt="P.S. 038 Donald Hertz">
+            <strong>#6 - P.S. 038 Donald Hertz</strong>
+          </div>
+          <div class="item active upperrank mostpoverty leastwhite notcharter">
+            <img src="images/schools/williamhniles.png" alt="J.H.S. 118 William W. Niles">
+            <strong>#7 - J.H.S. 118 William W. Niles</strong>
+          </div>
+          <div class="item active upperrank lowerpoverty leastwhite charter">
+            <img src="images/schools/bronxcharterexcllence.png" alt="Bronx Charter School for Excellence">
+            <strong>#8 - Bronx Charter School for Excellence</strong>
+          </div>
+          <div class="item active upperrank lowerpoverty leastwhite notcharter">
+            <img src="images/schools/thecastlehill.png" alt="J.H.S. 127 The Castle Hill">
+            <strong>#9 - J.H.S. 127 The Castle Hill</strong>
+          </div>
+          <div class="item active upperrank lowerpoverty leastwhite notcharter">
+            <img src="images/schools/psis218.png" alt="I.S. 181 Pablo Casals">
+            <strong>#10 - I.S. 181 Pablo Casals</strong>
+          </div>
+          <div class="item active lowerrank lowerpoverty upperwhite notcharter">
+            <img src="images/schools/roseescala.png" alt="P.S. 071 Rose E. Scala">
+            <strong>#11 - P.S. 071 Rose E. Scala</strong>
+          </div>
+          <div class="item active lowerrank mostpoverty leastwhite notcharter">
+            <img src="images/schools/personalleadership.png" alt="Academy for Personal Leadership and Excellence">
+            <strong>#12 - Academy for Personal Leadership and Excellence</strong>
+          </div>
+          <div class="item active lowerrank mostpoverty leastwhite charter">
+            <img src="images/schools/americandreamacademy.png" alt="American Dream Charter School">
+            <strong>#13 - American Dream Charter School</strong>
+          </div>
+          <div class="item active lowerrank leastpoverty leastwhite notcharter">
+            <img src="images/schools/danielhalewilliams.png" alt="M.S. 180 Dr. Daniel Hale Williams">
+            <strong>#14 - M.S. 180 Dr. Daniel Hale Williams</strong>
+          </div>
+          <div class="item active lowerrank upperpoverty leastwhite charter">
+            <img src="images/schools/bronxsuccessacademy1.png" alt="Bronx Charter School for Excellence">
+            <strong>#15 - Bronx Charter School for Excellence</strong>
+          </div>
+          <div class="item active bottomrank leastpoverty leastwhite notcharter">
+            <img src="images/schools/jhs144.png" alt="J.H.S. 144 Michelanglo">
+            <strong>#16 - J.H.S. 144 Michelanglo</strong>
+          </div>
+          <div class="item active bottomrank leastpoverty leastwhite notcharter">
+            <img src="images/schools/psX015.png" alt="P.S. X015 Institute for Environmental Learning">
+            <strong>#17 - P.S. X015 Institute for Environmental Learning</strong>
+          </div>
+          <div class="item active bottomrank leastpoverty leastwhite charter">
+            <img src="images/schools/icahn2.png" alt="ICAHN Charter School 2">
+            <strong>#18 - ICAHN Charter School 2</strong>
+          </div>
+          <div class="item active bottomrank upperpoverty leastwhite notcharter">
+            <img src="images/schools/jonasbronck.png" alt="Jonas Brouck Academy">
+            <strong>#19 - Jonas Brouck Academy</strong>
+          </div>
+          <div class="item active bottomrank mostpoverty lowerwhite notcharter">
+            <img src="images/schools/thomascgiordano.png" alt="Thomas C. Giordano Middle School 45">
+            <strong>#20 - Thomas C. Giordano Middle School 45</strong>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div id="footer">
+      <p>Images via Googlemaps Streetview and Teens Take Charge <a hef="https://youtu.be/ToveG0qde-c">youtube page.</a> Data can be found <a
+          href="https://docs.google.com/spreadsheets/d/1zgdfB9ofxO32UmnXDoTrbx0R3lda2aEvylm15kxDri4/edit?usp=sharing">here</a>.</p>
+    </div>
+
+    <!-- Your javascript should be called here -->
+    <script src="main.js"></script>
+  </body>
+
+</html>
